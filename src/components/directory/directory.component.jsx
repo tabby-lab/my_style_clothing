@@ -1,7 +1,9 @@
 import React from 'react';
 import MenuItem from '../menu-item/menu-item.component';
+import './directory.styles.scss'
 
 //class component bc I need to store the state value of the menu items that I want to pass and create menu items with
+//go back and change to functional
 class Directory extends React.Component {
     constructor() {
         super();
@@ -47,12 +49,13 @@ class Directory extends React.Component {
         return (
             <div className='directory-menu'>
                 {
-                    this.state.sections.map(section => (
-                        <MenuItem />
+                    this.state.sections.map(({ title, imageUrl, id }) => (
+                        <MenuItem key={id} title={title} imageUrl={imageUrl} />
                     ))
                 }
             </div>
-        )
+        );
     }
 }
 
+export default Directory;
