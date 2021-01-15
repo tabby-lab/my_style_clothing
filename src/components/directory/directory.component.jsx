@@ -58,4 +58,6 @@ class Directory extends React.Component {
     }
 }
 
+//make a for loop here
+
 export default Directory;
